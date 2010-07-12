@@ -70,20 +70,20 @@
 %
 
 %% Use these lines for letter-sized paper
-\usepackage[paper=letterpaper,
-            %includefoot, % Uncomment to put page number above margin
-            marginparwidth=1.2in,     % Length of section titles
-            marginparsep=.05in,       % Space between titles and text
-            margin=0.5in,               % 1 inch margins
-            includemp]{geometry}
+%%\usepackage[paper=letterpaper,
+%%            %includefoot, % Uncomment to put page number above margin
+ %%           marginparwidth=1.2in,     % Length of section titles
+%%            marginparsep=.05in,       % Space between titles and text
+%%            margin=0.5in,               % 1 inch margins
+%%            includemp]{geometry}
 
 %% Use these lines for A4-sized paper
-%\usepackage[paper=a4paper,
-%            %includefoot, % Uncomment to put page number above margin
-%            marginparwidth=30.5mm,    % Length of section titles
-%            marginparsep=1.5mm,       % Space between titles and text
-%            margin=25mm,              % 25mm margins
-%            includemp]{geometry}
+\usepackage[paper=a4paper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=30.5mm,    % Length of section titles
+           marginparsep=1.5mm,       % Space between titles and text
+            margin=10mm,              % 25mm margins
+            includemp]{geometry}
 
 %% More layout: Get rid of indenting throughout entire document
 \setlength{\parindent}{0in}
@@ -220,41 +220,29 @@
 CB2 3AP                                & \textit{E-mail:} \href{mailto:wk249@cam.ac.uk}{wk249@cam.ac.uk}\\
 \end{tabular}
 
-\section{Objective}
-%
-A position with a company for an internship in the summer of 2010.
-
 \section{Education}
 %
 \href{http://www.cam.ac.uk/}{\textbf{Cambridge University}}, Cambs, UK
 \begin{outerlist}
-\item[] B.A., \href{http://www.cl.cam.ac.uk/}{Computer Science Tripos}, Part Ia, June 2010
-
+\item[] B.A., \href{http://www.cl.cam.ac.uk/}{Computer Science Tripos}, Part Ia \hfill \textbf{June 2010}
         \begin{innerlist}
-        \item Computer Science Paper 1: \emph{Class II, division 2}
-        \item Computer Science Paper 2: \emph{Class II, division 1}
-        \item Mathematics: \emph{Class II, division 1}
-	\item Physics: \emph{Class II, division 2}
-
+        \item Computer Science Paper I (\emph{Class II, division 2}): Functional Programming, Algorithms, Logic.
+        \item Computer Science Paper II (\emph{Class II, division 1}): Systems, Digital Electronics, Logic II.
+        \item Mathematics (\emph{Class II, division 1}): Probability, Calculus, Fourier Series, Matricies.
+	\item Physics (\emph{Class II, division 2}): Mechanics, Electromagnetism, Relativity, Quantum Mechanics.
         \end{innerlist}
-\item[] Reference: \href{http://www.cl.cam.ac.uk/~nad10}{Neil Dodgson} (\href{mailto:nad10@cam.ac.uk}{nad10@cam.ac.uk})
-
+\item[] Starting Ib Group Project on software for SMS messaging in third world countries.
 \end{outerlist}
 
 \blankline
 
 \textbf{\href{http://www.queenelizabeth.cumbria.sch.uk/}{Queen Elizabeth School}}, Kirkby Lonsdale, Cumb, UK
-\begin{outerlist}
-\item[] GCE A, June 2009
-        \begin{innerlist}
-        \item Computing: \emph{A (598/600)}; Electronics: \emph{A (full marks)}; Physics: \emph{A}; Maths: \emph{A}; Further Maths: \emph{A}; (All completed to A2 level)
-        \end{innerlist}
+\begin{innerlist}
+\item[] \textbf{GCE} Computing: \emph{A (598/600)}; Physics: \emph{A}; Maths: \emph{A}; Further Maths: \emph{A}. \hfill \textbf{June 2009}
+\item[] \textbf{GCE} Electronics: \emph{A (full marks in 5 modules, one of the AS modules not taken)}\hfill \textbf{June 2008}
+\item[] \textbf{GCSE} \emph{9A*; 4A.}\hfill \textbf{June 2007}
 
-\item[] GCSE, June 2007
-        \begin{innerlist}
-        \item \emph{9 $\times$ A*; 4 $\times$ A;}
-        \end{innerlist}	
-\end{outerlist}
+\end{innerlist}
 
 
 \section{Work Experience}
@@ -263,18 +251,18 @@ A position with a company for an internship in the summer of 2010.
 Lancs, UK
 \begin{outerlist}
 
-\item[] \textit{Various projects for research group.}%
+\item[] \textit{Invited back to work with same research group as previous summer}%
         \hfill \textbf{June 2010 to October 2010}
 \begin{innerlist}
-\item Performed physical installation of ALIX hardware running OpenWRT on site and troubleshooted problems.
+\item Installed the mesh boxes we had been working on all summer in a village and trained community volunteers to use the system and help others. Monitored load using my monitoring software.
 \item Built user support portal and request system + release pattern for rolling out set top boxes.
 \item Modified BitTorrent Tracker to alter it's peer list returned based on any given criteria.
 \item Worked on live streaming technologies over BitTorrent. (\href{http://p2p-next.org}{p2pnext}).
 \end{innerlist}
 
-\item[] \textit{Various projects for research group}%
+\item[] \textit{Summer work after secondary school with research group}%
         \hfill \textbf{June 2009 to October 2009}
-\begin{innerlist}
+\begin{innerlist}oface	                                      
 \item Maintained a custom build of OpenWRT.
 \item Used OLSR to configure a mesh network between large number of boards all running custom OpenWRT.
 \item Developed log system and web interface to inspect the status of the boxes on the mesh network.
@@ -282,7 +270,7 @@ Lancs, UK
 
 \end{innerlist}
 
-\item[] Reference: \href{http://www.comp.lancs.ac.uk/department/staff.php?name=race}{Nicholas Race} (\href{mailto:n.race@lancaster.ac.uk}{n.race@lancaster.ac.uk}, +441524510123)
+
 \end{outerlist}
 
 
@@ -298,25 +286,42 @@ Lancs, UK
 \item Wrote some code on a test bed system (that uses identical hardware).
 
 \end{innerlist}
-\item[] Reference: \href{}{Neil Read} (\href{mailto:neal.read@british-energy.com}{neal.read@british-energy.com})
+
 \end{outerlist}
 
-\section{Technical Skills}
+\section{Technical \linebreak Skills}
 %
-Experience with hardware and software with including good knowledge of both Digital and Analog Electronics.
+\textbf{Programming Languages}
+\begin{innerlist}
+\item Fluent: C, C$+$$+$, Java, JavaScript, PHP, ML, UNIX shell scripting, SQL
+\item Good Knowledge: Perl, Haskell, Prolog, SystemVerilog, Python
+\end{innerlist}
+\textbf{Tools}
+\begin{innerlist}
+\item Computer Applications: \TeX{}, vim, common productivity suites for linux/windows.
+\item Operating Systems: Microsoft Windows, Linux.
+\item Discrete Maths, Knowledge of low level hardware.
+\end{innerlist}
+\section{Extra Curricular}
+%
+\textbf{Sport}
+\begin{innerlist}
+ \item Rowing: I currently row in Emmanuel College senior 1st boat
+ \item Cycling: I cycle between cambridge and my home in the lake district at the start and end of each term. I carry my things I need to have at home in a backpack and four saddle bags.
+ \item Skiing: I ski weekly at a local dry ski slope and participate in local races.
+\end{innerlist}
 
-\blankline
+\textbf{Arts}
+\begin{innerlist}
+ \item Singing: I sing in the college chorus, performing in frequent concerts / charity carols on street.
+ \item Musical Theatre: I am a member of the G\&S society and perform in operettas with them.
+ \item Dancing: I take ballroom dancing lessons.
+\end{innerlist}
 
-Programming: C, C$+$$+$, Java, JavaScript, Perl, PHP, ML, Haskell, Prolog, SystemVerilog, UNIX
-        shell scripting, SQL, Version control systems.
-
-\blankline
-
-Computer Applications: \TeX{}, vim, common productivity suites for linux/windows/mac
-
-\blankline
-
-Operating Systems: Microsoft Windows, Linux
+\section{References}
+\href{http://www.cl.cam.ac.uk/~nad10}{Neil Dodgson} (\href{mailto:nad10@cam.ac.uk}{nad10@cam.ac.uk});
+\href{http://www.comp.lancs.ac.uk/department/staff.php?name=race}{Nicholas Race} (\href{mailto:n.race@lancaster.ac.uk}{n.race@lancaster.ac.uk}, +441524510123);
+\href{}{Neil Read} (\href{mailto:neal.read@british-energy.com}{neal.read@british-energy.com}).
 
 \end{document}
 
