@@ -18,7 +18,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Don't like 10pt? Try 11pt or 12pt
-\documentclass[10pt]{article}
+\documentclass[11pt]{article}
 
 % This is a helpful package that puts math inside length specifications
 \usepackage{calc}
@@ -115,7 +115,7 @@
 
 % Finally, give us PDF bookmarks
 \usepackage{color,hyperref}
-\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.4}
 \hypersetup{colorlinks,breaklinks,
             linkcolor=darkblue,urlcolor=darkblue,
             anchorcolor=darkblue,citecolor=darkblue}
@@ -164,6 +164,13 @@
          \marginpar{
          \raggedright \scshape #1}#2}
 
+\renewcommand{\subsection}[2]%
+        {\pagebreak[2]\vspace{1.3\baselineskip}%
+         \phantomsection\addcontentsline{toc}{section}{#1}%
+         \hspace{0in}%
+         \marginpar{
+         \raggedright \scshape \footnotesize #1}#2}
+
 % An itemize-style list with lots of space between items
 \newenvironment{outerlist}[1][\enskip\textbullet]%
         {\begin{itemize}[#1]}{\end{itemize}%
@@ -173,7 +180,7 @@
 % when used as the first thing in a \section
 \newenvironment{lonelist}[1][\enskip\textbullet]%
         {\vspace{-\baselineskip}\begin{list}{#1}{%
-        \setlength{\partopsep}{0pt}%
+        \hspace{1cm}\setlength{\partopsep}{0pt}%
         \setlength{\topsep}{0pt}}}
         {\end{list}\vspace{-.6\baselineskip}}
 
@@ -202,7 +209,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-\makeheading{William Kenyon}
+\makeheading{William Kenyon (British Citizen)}
 
 \section{Contact Information}
 %
@@ -220,189 +227,201 @@
 CB2 3AP                                & \textit{E-mail:} \href{mailto:wk249@cam.ac.uk}{wk249@cam.ac.uk}\\
 \end{tabular}
 
-\section{Education}
-%
-\href{http://www.cam.ac.uk/}{\textbf{Cambridge University}}, Cambridgeshire, UK
-\begin{outerlist}
-\item[] B.A., \href{http://www.cl.cam.ac.uk/}{Computer Science Tripos}
-\begin{innerlist}
-\item[] \textbf{Part II} \hfill \textbf{2012}
-        \begin{innerlist}
-	    \item Project Work (\emph{Ongoing}): Dissertation in Artificial Intelligence, \emph{A Monte Carlo Tree Search Library in Haskell} is currently in the early implementation stages.
-	    \end{innerlist}
-	    \blankline
-\item[] \textbf{Part IB} \hfill \textbf{2011}
-        \begin{innerlist}
-        \item Computer Science Paper III (\emph{2.2}): Algorithms, C/C$++$, Software Engineering, Prolog, Java.
-        \item Computer Science Paper IV (\emph{2.2}): Architecture, Networking, Concurrent \& Distributed Sys.
-        \item Computer Science Paper V (\emph{2.2}): Artificial Intelligence, Graphics,  Databases, Security.
-	    \item Computer Science Paper VI (\emph{2.1}): Computation Theory, Complexity Theory, Semantics, Logic and Proof. 
 
-	    \item Project Work (\emph{Pass}): Built SMS hub for radio DJs in third world countries. Worked in team of five, in which everyone wrote code managed under version control system. Project was for a real client and bi-weekly progress meetings were made. Personally delivered presentation of project to audience of academics, peers and local business people who then voted our project second best out of the fifteen groups.
-	    \item Hardware Labs (\emph{Pass}): Implemented \emph{Pong} and \emph{Game of Life} on an \href{www.altera.com}{Altera} Programmable Logic Device.
-        \end{innerlist}
-        
-\blankline
-\item[] \textbf{Part IA} \hfill \textbf{2010}
-        \begin{innerlist}
-        \item Computer Science Paper I (\emph{2.2}): Functional Programming, Algorithms, Logic.
-        \item Computer Science Paper II (\emph{2.1}): Systems, Digital Electronics, Logic II.
-        \item Mathematics (\emph{2.1}): Probability, Calculus, Fourier Series, Matricies.
-	\item Physics (\emph{2.2}): Mechanics, Electromagnetism, Relativity, Quantum Mechanics.
-	\item Hardware Labs (\emph{Pass}): Various projects with with low level electronics (transistors/gates).
-	\item Java Labs (\emph{Pass}): Graphical \emph{Game of Life} viewer with numerous bells and whistles.
-	\item Functional Programming Labs (\emph{Pass}): Several toy functional program puzzles and two more substantial exercises: a program which finds the shortest path in a network and a program which draws any region of the \emph{Mandelbrot Set}.
-        \end{innerlist}
+
+\section{Higher Education}
+\href{http://www.cam.ac.uk/}{\textbf{Cambridge University}}, Cambridgeshire, UK\hfill\textbf{2009--Present}
+
+\subsection{M.Eng. \newline Computer Science}
+I have been accepted to start this course in October. There are strict conditions for entry, and I was accepted as my B.A. mark was 0.5\% below the cut-off for a $1^{st}$ class.
+
+\subsection{B.A. \newline Computer Science \newline Class 2.1}\textbf{Taught Courses}
+\begin{outerlist}
+\item\textbf{Software Engineering}: C/C$++$, Java, ML, Prolog, System Verilog, The Dangers of Floating Point Arithmetic, Data Structures \& Algorithms, Development Methodology, Evolution of Programming Languages, Failures in Software Engineering, and Unix Tools. 
+
+\item\textbf{Systems}: Computer Architecture, Computer Hardware, Computer Networking, Concurrent \& Distributed Systems, Digital Electronics, Digital Signal Processing, Information Theory \& Coding, and Operating Systems.
+
+\item\textbf{Theory}:  Complexity/Computation Theory, Databases, Denotational/Operational Semantics, Regular Languages \& Finite Automauta, Specification \& Verification, and Types.
+
+\item\textbf{Specialist}: Decompilation, Optimizing Compilers,  Computer Graphics, Natural Language Processing, Quantum Computing, and Security.
+
+\item\textbf{Mathematics:} Calculus, Discrete Mathematics, Fourier Series/Transforms, Matricies, Probablility, Taylor Series, and Vectors.
+
+\item\textbf{Physics:} Mechanics, Electromagnetism, Special Relativity, and Quantum Mechanics.
+
+\item\textbf{Non-technical:} Buisness, E-commerce, Economics, Ethics, Law, and Philosophy.
+\end{outerlist}
+\vspace{0.5cm}
+\textbf{Projects}
+
+\begin{outerlist}
+\item\textbf{Third Year Solo Project:} A state-of-the-art Artificial Inteligence technique was implemented for the first time in Haskell. My dissertation: \href{mcts.com}{A Monte Carlo Tree Search Library in Haskell}, illustrated how use of \href{tdd.com}{Test-Driven Development} led to a very stable product.
+
+\item\textbf{Second Year Group Project:} An SMS hub was constructed for radio DJs in third world countries. I delivered a presentation \& demonstration of the project to a large audience of academics and local business people. The audience voted our project second best out of the fifteen groups.
+
+%Worked in team of five, in which everyone wrote code managed under version control system. Project was for a real client and bi-weekly progress meetings were made. 
+
+\item\textbf{Smaller Projects} 
+\begin{innerlist}
+\item A multi-player capture-the-flag agent was implemented in \href{python.com}{Python}. 
+\item \href{pong.com}{Pong} and \href{gol.com}{Game of Life} were implemented on a \href{fpga.com}{Field Programmable Gate Array} in System Verilog \& \href{mips.com}{MIPS Assembly Language}. 
+\item A shortest-path-finder and Mandelbrot Set renderer were implemented in ML. An Internet chat server \& client were implemented in Java. 
+\item A TCP packet parser was implemented in C. 
+\item Various low-level electronics projects were implemented at the transistor and logic gate level.
 \end{innerlist}
 \end{outerlist}
-
-\blankline
-
-\textbf{\href{http://www.queenelizabeth.cumbria.sch.uk/}{Queen Elizabeth School}}, Kirkby Lonsdale, Cumbria, UK
+\section{Secondary Education}\textbf{\href{http://www.queenelizabeth.cumbria.sch.uk/}{Queen Elizabeth School}}, Kirkby Lonsdale, Cumbria, UK \hfill \textbf{2002--2009}
 \begin{innerlist}
-\item[] \textbf{GCE} Computing: \emph{A (598/600)}; Physics: \emph{A}; Maths: \emph{A}; Further Maths: \emph{A}. \hfill \textbf{2009}
-\item[] \textbf{GCE} Electronics: \emph{A (full marks in 5/6 modules)}\hfill \textbf{2008}
-\item[] \textbf{GCSE} \emph{9A*; 4A.}\hfill \textbf{2007}
+%\item[] \textbf{GCE} Computing: \emph{A (598/600)}, Physics: \emph{A}, Maths: \emph{A}, Further Maths: \emph{A}. \hfill \textbf{2009}
+%\item[] \textbf{GCE} Electronics: \emph{A (full marks in 5/6 modules)}\hfill \textbf{2008}
+\item[] \textbf{GCE} Grade \emph{A} in Computing, Electronics, Physics, Maths \& Further Maths. \hfill \textbf{2009}
+\item[] \textbf{GCSE} $9$\emph{A*} \& $4$\emph{A}.\hfill \textbf{2007}
 
 \end{innerlist}
 
 
 \section{Related Employment}
 %
-\href{http://www.realvnc.com/}{\textbf{RealVNC}},
-Cambridgeshire, UK
+\href{http://www.realvnc.com/}{\textbf{RealVNC Ltd.}},
+Cambridgeshire, UK \hfill \textbf{Summer 2011}
 \begin{outerlist}
 
-\item[] \textit{Wanted to experience working in a commercial rather than academic environment}%
-        \hfill \textbf{Summer 2011}
+\item[] \textit{Ported \href{vnc.com}{VNCViewer} to the \href{nacl.com}{Google Chrome Native Client (NaCl)} platform.}%
+       
 \begin{innerlist}
-\item Ported \emph{VNC Viewer} to the \emph{Google Chrome Native Client} (\emph{NaCl}) platform.
-\item Learnt C/C++ to a much higher level (only basics taught in Computer Science Tripos).
-\item Rewrote large chunks of the (UNIX specific) code to run in \emph{NaCl} sandbox.
-\item Replaced use of network sockets with a Javascript + Websockets tunnel.
-\item Rewrote concurrency control to use pthreads rather than the UNIX select function.
-\item Built web based frontend for viewing remote screen and controlling mouse and keyboard.
-\item It was working, with code thoroughly documented and commented by the time I left.
+\item Rewrote large chunks of UNIX specific C/C$++$ code to run in the \emph{NaCl} sand-box.
+\item Replaced network sockets with a Javascript + Websockets tunnel.
+\item Rewrote concurrency code to use pthreads rather than the UNIX select function.
+\item Built an in-browser front-end for viewing the remote screen and emulating remote input devices.
+%\item Project was working, with code thoroughly documented and commented by the time I left.
 \item A full time employee was brought on after I left to turn my project into a releasable product.
 
 \end{innerlist}
 \end{outerlist}
-\pagebreak
-\section{Related Employment}
+
+\blankline
+
 %
 \href{http://www.lancs.ac.uk/}{\textbf{Lancaster University}},
-Lancashire, UK
+Lancashire, UK        \hfill \textbf{Summer 2009 \& 2010}
 \begin{outerlist}
 
-\item[] \textit{Invited back to work with same research group as previous summer}%
-        \hfill \textbf{Summer 2010}
-\begin{innerlist}
-\item Continued projects I had started in the previous summer using the documentation I had written.
-\item Installed the mesh boxes we had been working on all summer in a village and trained community volunteers to use the system and help others. Monitored usage using my monitoring software.
-\item Built user support portal and request system \& release pattern for rolling out set top boxes.
-\item Worked on live streaming technologies over BitTorrent. (\href{http://p2p-next.org}{p2pnext}).
-\end{innerlist}
 
-\item[] \textit{Summer work after secondary school with research group}%
-        \hfill \textbf{Summer 2009}
-\begin{innerlist}	                                      
-\item Gained experiecnce of working in a team, working to deadlines, attending project meetings.
-\item Experience of documenting thoroughly and producing code consistent with rest of team.
-\item Built and maintained a test mesh network which was physically installed on coat stands in office.
-\item Developed log system and web interface to inspect the status of the boxes on the mesh network.
-\item Developed remote system using PXE to reflash bricked boxes.
+\item[] \textit{Worked with a research group on \href{p2pnext.com}{p2pnext}, a peer-to-peer live telivision streaming project.}%
+\begin{innerlist}
+\item Modified the p2pnext streaming-bit-torrent client to favour geographically close peers.
+\item Built a user support portal and request system for rolling out streaming set top boxes.
+\end{innerlist}
+\item[] \textit{Worked with a research group on a community \href{wraynetwrok.com}{Wireless Mesh Network} based on \href{openwrt.com}{OpenWRT}.}%
+\begin{innerlist}
+\item Built an access-control portal -- based on \href{wifidog.com}{Wifidog} -- to limit the people with access to the network.
+\item Modfied source code of OpenWRT \& Wifidog  within my own development-build.
+%\item Continued projects I had started in the previous summer using the documentation I had written.
+%\item Installed the mesh boxes we had been working on all summer in a village and trained community volunteers to use the system and help others. Monitored usage using my monitoring software.
+
+%\item Gained experiecnce of working in a team, working to deadlines, attending project meetings.
+%\item Experience of documenting thoroughly and producing code consistent with rest of team.
+\item Installed the physical mesh-boxes on roof-tops in the local community.
+\item Developed a log system \& web-interface to inspect the status of individual mesh-boxes.
+\item Developed a system based on the \href{pxe.com}{Portable Execution Environment} to re-flash `bricked' mesh-boxes. This eliminated having to climb onto roof-tops to do so***.
 
 \end{innerlist}
 \end{outerlist}
 
 
-\blankline
-
-\textbf{\href{http://www.british-energy.com/}{British Energy} (now \href{http://www.edfenergy.com}{EDF Energy}), Heysham II Nuclear Power Station}, Lancashire, UK
+\section{Related Employment}
+\textbf{\href{http://www.edfenergy.com}{EDF Energy}, Heysham II Nuclear Power Station}, Lancashire, UK\hfill \textbf{Summer 2008}
 \begin{outerlist}
 
-\item[] \textit{Work Experience}%
-        \hfill \textbf{Summer 2008}
+\item[] \textit{Work Experience}% **??? you arent saying anything. what was your title. this is already headed uder related employment. 
+        
 \begin{innerlist}
 \item Gained understanding of how computer systems are used to monitor and control a nuclear reactor.
-\item Wrote some code on the development system (identical hardware to the computer system controlling the reactor).
+\item Wrote code on development system (carbon copy of the computer system controlling the reactor). **this does not say anything to me. so what if it is a carbon copy. what good did you do? 
 
 \end{innerlist}
 
 \end{outerlist}
 \section{Other Employment}
 %
-\textbf{\href{http://www.queenelizabeth.cumbria.sch.uk/}{Queen Elizabeth School}}, Kirkby Lonsdale, Cumbria, UK
+\textbf{\href{http://www.queenelizabeth.cumbria.sch.uk/}{Queen Elizabeth School}}, Kirkby Lonsdale, Cumbria, UK \hfill \textbf{2007--2009}
+
+\par \textbf{\href{http://www.bridgehousefarm.co.uk/}{Bridge House Farm Tearooms}}, Wray, Lancaster, Lancashire, UK \hfill \textbf{2005--2008}
 \begin{outerlist}
 
-\item[] \textit{Cleaned as a sixth form student after school}%
-        \hfill \textbf{2008 - 2009}
+\item[] \textit{Part time cleaning and `waiting-on' jobs***}%
+        
 \begin{innerlist}
-\item Well paid job for age.
-\item In charge of all rooms in Art department, took pride in the cleanliness of my building.
-
-\end{innerlist}
-
-\end{outerlist}
-\blankline
-
-\textbf{\href{http://www.bridgehousefarm.co.uk/}{Bridge House Farm Tearooms}}, Wray, Lancaster, Lancashire, UK
-\begin{outerlist}
-
-\item[] \textit{Worked up through ranks at local tearooms}%
-        \hfill \textbf{2005 - 2008}
-\begin{innerlist}
-\item Initially employed to wash dishes in the kitchen.
-\item Then later preparing food, serving customers from behind the till, serving food at tables.
-\item Learnt how to look professional and be courteous towards customers.
+\item Well paid jobs for age.**take out**
+\item Was known for being responsible and having good work ethic. ** i would write something else like : Due to good work ethic and good table-side manners/?? , I was given jobs of greater responsibility. I was waiter at Bridge House Farm Tearooms.*** no space, take out
 
 \end{innerlist}
 
 \end{outerlist}
 
+\subsection{\normalsize Technical Skills \footnotesize Programming Languages}
+\href{c.com}{C/C$++$}, \href{java.com}{Java}, \href{ml.com}{ML}, \href{prolog.com}{Prolog}, and \href{sysver.com}{System Verilog} were the major languages taught as part of my undergraduate degree. \href{bash.com}{Bash}, \href{matlab.com}{Matlab}, and \href{perl.com}{Perl} were taught in the context of their use in \href{unix.com}{UNIX} systems. I have used \href{haskell.com}{Haskell}, \href{python.com}{Python} and \href{vb6.com}{Visual Basic} in my own projects. Working on web projects has given me a good understanding of \href{javascript.com}{Javascript}, \href{html.com}{HTML}, \href{php.com}{PHP}, and \href{sql.com}{SQL}.
 
-\section{Technical \linebreak Skills}
-%
-\textbf{Programming Languages}
-\begin{innerlist}
-\item Fluent: C, C$++$, Haskell, Java, JavaScript, ML, PHP, UNIX shell scripting, SQL.
-\item Good Knowledge: Lua, Matlab, Perl, Prolog, Python, SystemVerilog.
-\end{innerlist}
-\textbf{Tools}
-\begin{innerlist}
-\item Computer Applications: \TeX{}, vim, common productivity suites for linux/windows.
-\item Operating Systems: Microsoft Windows, Linux.
-\item Discrete Maths, Knowledge of low level hardware.
-\end{innerlist}
-\section{Extra Curricular}
-%
-\textbf{Sport}
-\begin{innerlist}
- \item Currently rowing with \href{http://www.culrc.com}{Cambridge University Lightweight Rowing Club}.
- \item Cycle between Cambridge and my home in the lake district at the start and end of each term. I carry the things I need in a backpack and four saddle bags.
- \item Ski weekly at a local dry ski slope and participate in \href{www.ersa.com}{Eastern Region} races.
- \item Sail a \emph{Laser I} dinghy competitively in weekly club races at a local sailing club.
-\end{innerlist}
 
-\textbf{Arts}
-\begin{innerlist}
- \item Sing in \href{http://www.emmamusic.co.uk/index.php?page=chorus}{Emmanuel College Chorus}, performing in frequent concerts / charity carols on street.
- \item Perform in \href{http://cambridge.gands.org.uk/}{Cambridge University Gilbert and Sullivan Society} operettas.
- \item Dance with the \href{http://www.cambridgedancers.org/}{Cambridge Dancers Club}.
-\end{innerlist}
 
-\section{References}
+
+I have basic knowledge of historical languages such as \href{algol.com}{Algol}, \href{fortran.com}{Fortran},  and \href{smalltalk.com}{Smalltalk}. 
+I understand the compromises (safe/un-safe, typed/un-typed, call-by-value/call-by-name/call-by-need) involved in the design of languages. I have studied these concepts formally as part of \href{types.com}{Type Theory} and \href{op.com}{Operational}/\href{de.com}{Denotational} Semantics. 
+
+\subsection{Code Style \& Documentation}
+I am versatile and have had to quickly adopt the different styles employed in large code-bases ??? with strict documentation and coding styles???? during my internships.***  I document code as I write it, and am used to using documentation generation tools such as \href{junit.com}{JUnit}.
+
+\subsection{Libraries \& Tools}
+I have studied the theory of \href{cl.ac.uk}{Concurrent \& Distributed Systems} and can write thread safe code using built-in Java concurrency constructs and the \href{pthreads.com}{pthreads} library in C/C$++$. I use the C$++$ \href{stl.com}{Standard Template Library} including \href{TF1.com}{TF1}. In a web development context, I have experience with \href{ajax.com}{Ajax}, \href{drupal.com}{Drupal} \href{node.js}{node.js} \& \href{websockets.com}{Websockets}.
+I am comfortable in a \href{linux.com}{Linux}, \href{mac.com}{Macintosh}, or \href{windows.com}{Windows} environment. 
+
+\subsection{Data Structures \& Algorithms}
+\href{wiki.com}{Fibonacci Heaps}, \href{wiki.com}{Disjoint Sets}, \href{wiki.com}{B Trees}, \href{wiki.com}{Red Black Trees}, \href{www.tick0.com}{External $n$-way Merge Sort}, and basic data structures \& algorithms were studied during my undergraduate degree. I have implemented many of the above in C$++$ or Java. I can find asymtotic complexity bounds (expressed in big \emph{O}, $\Omega$ and $\Theta$ notation) for algorithms using standard and amortized analysis. 
+
+\subsection{Logic \& Discrete Mathematics}
+Reasoning and proof in first/second/higher order logics, temporal logics, hoare/separation logic, polymorphic lambda calculi and sequent calculi was studied during my undergraduate degree. I understand how automated theorem provers can be implemented efficiently using binary descision diagrams. 
+
+\subsection{Specification \& Verification}
+I can write specifications for program code, and prove** the code meets the specifications. I can model small software/hardware systems, and proove that the model meets a specification written in Computation Tree Logic, Linear Time Logic or PSL.
+
+\section{Other Skills \footnotesize Teamwork}
+At Lancaster University, RealVNC, and during my undergraduate group project, I was working as part of a team. I had responsibilities, deadlines to meet, client meetings and presentations to give. I have good communication skills, which were essential in these roles.
+
+%\subsection{Law}
+%I have good knowledge of the laws and regulations relevant to the IT industry***. This was obtained during my undergraduate degree and internships***.
+
+\section{Intrests}
 %
-\textbf{Education}
-\begin{innerlist}
-\item \href{http://www.cl.cam.ac.uk/~nad10}{Neil Dodgson} (\href{mailto:nad10@cam.ac.uk}{nad10@cam.ac.uk})
-\end{innerlist}
-\textbf{Employment}
-\begin{innerlist}
-\item \href{http://uk.linkedin.com/pub/jason-morley/4/78a/68}{Jason Morley} (\href{mailto:jason.morley@realvnc.com}{jason.morley@realvnc.com})
-\item \href{http://www.comp.lancs.ac.uk/department/staff.php?name=race}{Nicholas Race} (\href{mailto:n.race@lancaster.ac.uk}{n.race@lancaster.ac.uk}, +441524510123);
-\item \href{}{Neil Read} (\href{mailto:neal.read@british-energy.com}{neal.read@british-energy.com}).
-\end{innerlist}
+I am a senior member of \href{http://www.culrc.com}{Cambridge University Lightweight Rowing Club}. The training reigime is intense, and consists of 2 or 3 sessions per day. In 2012/2013 I shall be trialing for the Great Britain under-23 team.
+I have also participated fully in society life and have skied (competitively), sailed (competitively), and sung my way through university.
+
+%Ski at a local dry ski slope and participate in \href{www.ersa.com}{Eastern Region} races.**
+
+%Sail a \emph{Laser I} dinghy competitively in weekly club races at a local sailing club.
+
+
+
+%Have sung in \href{http://www.emmamusic.co.uk/index.php?page=chorus}{Emmanuel College Chorus}, performing in frequent concerts  and charity carols on street.
+
+%Performed in \href{http://cambridge.gands.org.uk/}{Cambridge University Gilbert and Sullivan Society} operettas.**
+
+%Danced with the \href{http://www.cambridgedancers.org/}{Cambridge Dancers Club}.**
+
+
+\section{Referees}
+%
+
+
+
+
+\href{http://realvnc.com}{Hannah Clear} (\href{mailto:hannah.clear@realvnc.com}{hannah.clear@realvnc.com})
+
+\href{http://www.cl.cam.ac.uk/~nad10}{Neil Dodgson} (\href{mailto:nad10@cam.ac.uk}{nad10@cam.ac.uk})
+
+\href{http://www.comp.lancs.ac.uk/department/staff.php?name=race}{Nicholas Race} (\href{mailto:n.race@lancaster.ac.uk}{n.race@lancaster.ac.uk})
+
+\href{}{Neil Read} (\href{mailto:neal.read@edf-energy.com}{neal.read@edf-energy.com})
+
 \end{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% End CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
